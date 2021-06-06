@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import printMe from './print.js';
+import { player } from './player.js';
 import './style.css';
 
 function component() {
@@ -13,6 +14,9 @@ function component() {
     btn.onclick = printMe;
 
     element.appendChild(btn);
+
+    element.appendChild(document.createElement('br'));
+    element.appendChild(player);
 
     return element;
 }
